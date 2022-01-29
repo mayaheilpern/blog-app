@@ -2,7 +2,7 @@ import {Routes, Route} from "react-router-dom";
 import DisplayBlog from "./screens/DisplayBlog/DisplayBlog";
 import Login from "./screens/Login/Login";
 import Home from "./screens/Home/Home";
-import SignUp from "./screens/Signup/SignUp";
+import SignUp from "./screens/SIgnup/SignUp";
 
 function App() {
   return (
