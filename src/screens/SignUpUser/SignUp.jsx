@@ -1,6 +1,6 @@
 import {apiPost} from "../../../src/services/apiConfig.js"
 import { useState } from "react"
-
+import "./signUpUser.css"
 const default_User = {
   userName: "",
   firstName: "",
@@ -28,7 +28,10 @@ const SignUpUser = () => {
     console.log(res);
     setInput(default_User);
   }
-  return <form onSubmit={handleSubmit}>
+  return <div>
+    <div className="leftside"></div>
+    <div className="rightside"></div>
+    <form onSubmit={handleSubmit}>
     <label>user Name</label>
     <input name="userName" value={input.userName} onChange={e => { handleTextInput() }}></input>
     <label>first Name</label>
@@ -41,7 +44,8 @@ const SignUpUser = () => {
       <input name="password" value={input.password} onChange={e => { handleTextInput() }}></input>
     <label>confirmPassword</label>
     <input name="confirmPassword" value={input.confirmPassword} onChange={e => { handleTextInput() }}></input>
-  </form>;
+  </form>
+  </div>;
 };
 
 export default SignUpUser;
