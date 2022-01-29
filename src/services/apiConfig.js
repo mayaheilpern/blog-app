@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BaseURL = "https://crud-class-exercise.herokuapp.com/api/";
+const BaseURL = "https://radiant-sierra-20133.herokuapp.com/api/";
 
 export const apiGet = axios({
   url: `${BaseURL}`,
