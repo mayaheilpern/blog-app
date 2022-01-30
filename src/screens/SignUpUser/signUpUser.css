@@ -4,7 +4,7 @@
   height: 100vh;
   z-index: 1;
   margin: 0px 0px;
-  animation: input 4s infinite alternate-reverse;
+  /* animation: input 4s infinite alternate-reverse; */
 }
 .rightside {
   position: absolute;
@@ -12,19 +12,19 @@
   width: 50px;
   height: 100vh;
   z-index: 1;
-  animation: input 4s infinite alternate-reverse;
+  /* animation: input 4s infinite alternate-reverse; */
 }
 @keyframes input {
   from {
-    background-color: radial-gradient(#9198e5, #e66465);
+    background-color: radial-gradient(200px, #e66465, #9198e5);
   }
   to {
-    background: radial-gradient(#e66465, #9198e5);
+    background: radial-gradient(300px, #e66465, #9198e5);
   }
 }
 
 .signUpForm {
-  background-color: yellow;
+  /* background-color: yellow; */
   display: grid;
   grid-template-rows: repeat(6, calc(100vh / 12));
   width: 100vw;
@@ -32,11 +32,13 @@
   overflow-y: scroll;
   position: relative;
   text-align: center;
+  background-color: #9198e5;
+  animation: input 10s infinite ease-in-out;
 }
 
 .signUpLabel {
   text-align: center;
-  background-color: yellow;
+  background: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
   position: relative;
@@ -48,6 +50,7 @@
   border-color: red;
   width: 40vw;
   margin: 0 auto;
+  background-color: white;
 }
 .signUpInput:focus {
   background-color: white;
