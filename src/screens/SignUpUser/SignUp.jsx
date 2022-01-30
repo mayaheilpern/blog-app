@@ -30,11 +30,6 @@ const SignUpUser = () => {
   };
 
   return (
-
-    <div>
-      <Layout>
-      <form
-
     <Layout>
       <form className="signUpForm"
 
@@ -97,8 +92,6 @@ const SignUpUser = () => {
         <button>Submit</button>
       </form>
       </Layout>
-    </div>
-    </Layout>
   );
 };
 
