@@ -30,16 +30,21 @@ const SignUpUser = () => {
   };
 
   return (
+
     <div>
       <Layout>
       <form
+
+    <Layout>
+      <form className="signUpForm"
+
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
         <div className="leftside"></div>
       <div className="rightside"></div>
-        <label>user Name</label>
+        <label id="signUpLabel">user Name</label>
         <input
           name="userName"
           value={input.userName}
@@ -47,7 +52,7 @@ const SignUpUser = () => {
             handleTextInput(e);
           }}
         ></input>
-        <label>first Name</label>
+        <label id="signUpLabel">first Name</label>
         <input
           name="firstName"
           value={input.firstName}
@@ -55,7 +60,7 @@ const SignUpUser = () => {
             handleTextInput(e);
           }}
         ></input>
-        <label>last Name</label>
+        <label id="signUpLabel">last Name</label>
         <input
           name="lastName"
           value={input.lastName}
@@ -63,7 +68,7 @@ const SignUpUser = () => {
             handleTextInput(e);
           }}
         ></input>
-        <label>Email</label>
+        <label id="signUpLabel">Email</label>
         <input
           name="email"
           value={input.email}
@@ -71,7 +76,7 @@ const SignUpUser = () => {
             handleTextInput(e);
           }}
         ></input>
-        <label>password</label>
+        <label id="signUpLabel">password</label>
         <input
           type="password"
           name="password"
@@ -80,7 +85,7 @@ const SignUpUser = () => {
             handleTextInput(e);
           }}
         ></input>
-        <label>confirmPassword</label>
+        <label id="signUpLabel">confirmPassword</label>
         <input 
           type="password"
           name="confirmPassword"
@@ -93,6 +98,7 @@ const SignUpUser = () => {
       </form>
       </Layout>
     </div>
+    </Layout>
   );
 };
 
