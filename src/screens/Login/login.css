@@ -4,6 +4,7 @@
     text-align: center;
     margin-top: 50px;
     padding: 40px;
+    color: white;
 }
 
 .fullForm {
@@ -13,6 +14,7 @@
 
 #legend {
     text-align: left;
+    color: antiquewhite;
 }
 
 .Inputs {
@@ -20,4 +22,13 @@
     margin: 20px; 
     padding: 10px 0 10px 0;
     justify-content: center;
+}
+
+#border {
+    border-color: rgb(75, 41, 41);
+}
+
+#button {
+    background-color: rgb(75, 41, 41);
+    color: antiquewhite;
 }
