@@ -30,13 +30,14 @@ const SignUpUser = () => {
 
   return (
     <div>
-      <div className="leftside"></div>
-      <div className="rightside"></div>
+      
       <form
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
+        <div className="leftside"></div>
+      <div className="rightside"></div>
         <label>user Name</label>
         <input
           name="userName"
