@@ -1,0 +1,15 @@
+.loginForm {
+    display: inline-block;
+    justify-content: center;
+    /* text-align: center; */
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.fullForm {
+    text-align: center;
+}
+
+#legend {
+    text-align: center;
+}

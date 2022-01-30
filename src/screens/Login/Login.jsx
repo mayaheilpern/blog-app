@@ -24,21 +24,32 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await loginUser(input)
-    navigate('/')
+    let res = await loginUser(input)
+    console.log(res)
+
+    // navigate('/')
   }
 
   return(
-    <div>
+    <div className="fullForm">
       <Layout>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="loginForm">
         <fieldset>
-          <legend> Login</legend>
+          <legend id="legend"> Login</legend>
           <label>Email</label>
-          <input type="text" onChange={handleTextInput}/>
+          <input 
+          type="text" 
+          onChange={handleTextInput} 
+          name="email"
+          value={input.email}/>
           <br />
           <label>Password</label>
-          <input type="password" onChange={handleTextInput}/>
+          <input 
+          type="password"
+           onChange={handleTextInput}
+          name="password"
+          value={input.password}
+          />
         </fieldset>
         <button type="submit">Login</button>
       </form>
