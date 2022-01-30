@@ -31,16 +31,15 @@ const SignUpUser = () => {
 
   return (
     <Layout>
+       <div className="leftside"></div>
+      <div className="rightside"></div>
       <form className="signUpForm"
-
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
-        <div className="leftside"></div>
-      <div className="rightside"></div>
         <label id="signUpLabel">user Name</label>
-        <input
+        <input id="signUpInput"
           name="userName"
           value={input.userName}
           onChange={(e) => {
@@ -48,7 +47,7 @@ const SignUpUser = () => {
           }}
         ></input>
         <label id="signUpLabel">first Name</label>
-        <input
+        <input id="signUpInput"
           name="firstName"
           value={input.firstName}
           onChange={(e) => {
@@ -56,7 +55,7 @@ const SignUpUser = () => {
           }}
         ></input>
         <label id="signUpLabel">last Name</label>
-        <input
+        <input id="signUpInput"
           name="lastName"
           value={input.lastName}
           onChange={(e) => {
@@ -64,7 +63,7 @@ const SignUpUser = () => {
           }}
         ></input>
         <label id="signUpLabel">Email</label>
-        <input
+        <input id="signUpInput"
           name="email"
           value={input.email}
           onChange={(e) => {
@@ -72,7 +71,7 @@ const SignUpUser = () => {
           }}
         ></input>
         <label id="signUpLabel">password</label>
-        <input
+        <input id="signUpInput"
           type="password"
           name="password"
           value={input.password}
@@ -81,7 +80,7 @@ const SignUpUser = () => {
           }}
         ></input>
         <label id="signUpLabel">confirmPassword</label>
-        <input 
+        <input id="signUpInput"
           type="password"
           name="confirmPassword"
           value={input.confirmPassword}
