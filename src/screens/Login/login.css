@@ -1,15 +1,23 @@
 .loginForm {
     display: inline-block;
     justify-content: center;
-    /* text-align: center; */
+    text-align: center;
     margin-top: 50px;
     padding: 40px;
 }
 
 .fullForm {
     text-align: center;
+    /* padding: 50px; */
 }
 
 #legend {
-    text-align: center;
+    text-align: left;
+}
+
+.Inputs {
+    display: block;
+    margin: 20px; 
+    padding: 10px 0 10px 0;
+    justify-content: center;
 }
