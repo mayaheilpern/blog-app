@@ -2,6 +2,7 @@ import {createUser} from "../../services/apiConfig";
 import {useState} from "react";
 import "./signUpUser.css";
 import {useNavigate} from "react-router-dom";
+import Layout from "../../Layout/Layout";
 const default_User = {
   userName: "",
   firstName: "",
@@ -30,7 +31,7 @@ const SignUpUser = () => {
 
   return (
     <div>
-      
+      <Layout>
       <form
         onSubmit={(e) => {
           handleSubmit(e);
@@ -90,6 +91,7 @@ const SignUpUser = () => {
         ></input>
         <button>Submit</button>
       </form>
+      </Layout>
     </div>
   );
 };

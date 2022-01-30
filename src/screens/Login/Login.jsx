@@ -5,6 +5,7 @@ import './login.css'
 const Login = () => {
   return(
     <div>
+      <Layout>
       <form>
         <fieldset>
           <legend> Login</legend>
@@ -16,6 +17,7 @@ const Login = () => {
         </fieldset>
         <button type="submit">Login</button>
       </form>
+      </Layout>
     </div>
   )
 };
