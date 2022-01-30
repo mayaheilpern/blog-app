@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './login.css'
+import Layout from "../../Layout/Layout";
 
 
 const Login = () => {
