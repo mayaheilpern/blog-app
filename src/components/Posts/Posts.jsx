@@ -1,6 +1,6 @@
 import {getPosts} from "../../services/apiConfig";
 import {useState, useEffect} from "react";
-import {Link} from "react-router-dom";
+import "./posts.css";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -13,16 +13,13 @@ const Posts = () => {
     fetchPosts();
   }, []);
   return (
-    <div>
+    <div className="card-container">
       {posts.map((post) => {
-        return;
-        <h3>{post.userName}</h3>;
-        if (post?.posts.length > 1) {
+        if (post?.posts.length > 0) {
           return post?.posts.map((a) => {
-            console.log(a);
             return (
-              <div key={a._id}>
-                {/* <h3>{`${post.firstName} ${post.lastName}`}</h3> */}
+              <div key={a._id} className="post-cards">
+                <h3>{`${post.userName}`}</h3>
                 <p>{a.content}</p>
               </div>
             );
