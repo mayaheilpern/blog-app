@@ -12,16 +12,18 @@ export const getPosts = axios({
     console.log(error);
   });
 
-// export const apiPost = axios({
-//   method: "post",
-//   url: `${BaseURL}`,
-// })
-//   .then((response) => {
-//     return response.data;
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+export const createUser = (props) =>
+  axios({
+    method: "post",
+    url: `${BaseURL}signup`,
+    data: props,
+  })
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
 // export const apiPut = axios({
 //   method: "put",
