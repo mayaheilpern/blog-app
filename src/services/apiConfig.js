@@ -37,6 +37,21 @@ export const createUser = (props) =>
     .catch((error) => {
       console.log(error);
     });
+
+    export const getUserPosts = (props) => {
+      console.log(props)
+    
+    axios({
+      url: `${BaseURL}user/${props}`,
+    })
+      .then((response) => {
+        console.log(response.data.data.user.posts)
+        return response.data.data.user.posts;
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    };
 // export const apiPut = axios({
 //   method: "put",
 //   url: `${BaseURL}`,
