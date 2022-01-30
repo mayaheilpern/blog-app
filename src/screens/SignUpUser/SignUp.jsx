@@ -93,7 +93,7 @@ const SignUpUser = () => {
         <button>Submit</button>
       </form>
       </Layout>
-    </div>
+
   );
 };
 
