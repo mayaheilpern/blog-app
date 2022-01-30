@@ -3,7 +3,7 @@ import DisplayBlog from "./screens/DisplayBlog/DisplayBlog";
 import Login from "./screens/Login/Login";
 import Home from "./screens/Home/Home";
 import SignUpUser from "./screens/SignUpUser/SignUp";
-import Navbar from "./components/Navbar/Navbar";
+
 
 function App() {
   return (

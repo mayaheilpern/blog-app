@@ -20,7 +20,11 @@
   height: 100vh;
   z-index: 1;
 }
+<<<<<<< HEAD
 /* form {
+=======
+.signUpForm {
+>>>>>>> 7acb3d7c732d94c3b5e272713870fb93966d8bb8
   background-color: yellow;
   display: grid;
   grid-template-rows: repeat(6, calc(100vh / 12));
@@ -31,7 +35,7 @@
   text-align: center;
 } */
 
-label {
+#signUpLabel {
   text-align: center;
   background-color: yellow;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
