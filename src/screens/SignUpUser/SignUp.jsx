@@ -72,6 +72,7 @@ const SignUpUser = () => {
         ></input>
         <label>password</label>
         <input
+          type="password"
           name="password"
           value={input.password}
           onChange={(e) => {
@@ -79,7 +80,8 @@ const SignUpUser = () => {
           }}
         ></input>
         <label>confirmPassword</label>
-        <input
+        <input 
+          type="password"
           name="confirmPassword"
           value={input.confirmPassword}
           onChange={(e) => {
