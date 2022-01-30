@@ -9,19 +9,22 @@
 
 .fullForm {
     text-align: center;
+    /* background-color: antiquewhite; */
     /* padding: 50px; */
 }
 
 #legend {
     text-align: left;
     color: antiquewhite;
+    
 }
 
 .Inputs {
     display: block;
     margin: 20px; 
-    padding: 10px 0 10px 0;
+    padding: 10px 5px 10px 5px;
     justify-content: center;
+    background-color: antiquewhite;
 }
 
 #border {
