@@ -40,40 +40,40 @@ const SignUpUser = () => {
           handleSubmit(e);
         }}
       >
-        <label id="signUpLabel">user Name</label>
-        <input id="signUpInput"
+        <label className="signUpLabel">user Name</label>
+        <input className="signUpInput"
           name="userName"
           value={input.userName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label id="signUpLabel">first Name</label>
-        <input id="signUpInput"
+        <label className="signUpLabel">first Name</label>
+        <input className="signUpInput"
           name="firstName"
           value={input.firstName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label id="signUpLabel">last Name</label>
-        <input id="signUpInput"
+        <label className="signUpLabel">last Name</label>
+        <input className="signUpInput"
           name="lastName"
           value={input.lastName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label id="signUpLabel">Email</label>
-        <input id="signUpInput"
+        <label className="signUpLabel">Email</label>
+        <input className="signUpInput"
           name="email"
           value={input.email}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label id="signUpLabel">password</label>
-        <input id="signUpInput"
+        <label className="signUpLabel">password</label>
+        <input className="signUpInput"
           type="password"
           name="password"
           value={input.password}
@@ -81,8 +81,8 @@ const SignUpUser = () => {
             handleTextInput(e);
           }}
         ></input>
-        <label id="signUpLabel">confirmPassword</label>
-        <input id="signUpInput"
+        <label className="signUpLabel">confirmPassword</label>
+        <input className="signUpInput"
           type="password"
           name="confirmPassword"
           value={input.confirmPassword}
