@@ -1,6 +1,5 @@
 .leftside {
   position: absolute;
-  background-color: wheat;
   width: 50px;
   height: 100vh;
   z-index: 1;
@@ -9,23 +8,18 @@
 }
 .rightside {
   position: absolute;
-  background-color: wheat;
   right: 0px;
   width: 50px;
   height: 100vh;
   z-index: 1;
-  animation: input 4s infinite;
+  animation: input 4s infinite alternate-reverse;
 }
 @keyframes input {
   from {
-    /* radial-gradient(farthest-corner at top right, ..) */
-    background-position: left top;
-    background-size: 200% 100%;
+    background-color: radial-gradient(#9198e5, #e66465);
   }
   to {
-    /* radial-gradient(farthest-corner at top left, ..) */
-    background-position: right top;
-    background-size: 200% 100%;
+    background: radial-gradient(#e66465, #9198e5);
   }
 }
 
