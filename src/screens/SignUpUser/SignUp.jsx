@@ -30,14 +30,9 @@ const SignUpUser = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div>
       <Layout>
       <form
-=======
-    <Layout>
-      <form className="signUpForm"
->>>>>>> 7acb3d7c732d94c3b5e272713870fb93966d8bb8
         onSubmit={(e) => {
           handleSubmit(e);
         }}
@@ -96,12 +91,8 @@ const SignUpUser = () => {
         ></input>
         <button>Submit</button>
       </form>
-<<<<<<< HEAD
       </Layout>
     </div>
-=======
-    </Layout>
->>>>>>> 7acb3d7c732d94c3b5e272713870fb93966d8bb8
   );
 };
 
