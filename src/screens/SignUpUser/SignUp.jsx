@@ -30,9 +30,9 @@ const SignUpUser = () => {
   };
 
   return (
-    <Layout>
-      <form className="signUpForm"
-
+    <div>
+      <Layout>
+      <form
         onSubmit={(e) => {
           handleSubmit(e);
         }}
@@ -92,6 +92,7 @@ const SignUpUser = () => {
         <button>Submit</button>
       </form>
       </Layout>
+    </div>
   );
 };
 
