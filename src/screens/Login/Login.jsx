@@ -26,8 +26,8 @@ const Login = () => {
     e.preventDefault()
     let res = await loginUser(input)
     console.log(res)
+    navigate(`/${res.data.user._id}`)
 
-    // navigate('/')
   }
 
   return(
@@ -38,10 +38,12 @@ const Login = () => {
           <legend id="legend"> Login</legend>
           <label>Email</label>
           <input 
-          type="text" 
+          type="email" 
           onChange={handleTextInput} 
           name="email"
-          value={input.email}/>
+          value={input.email}
+          className="Inputs"
+          />
           <br />
           <label>Password</label>
           <input 
@@ -49,6 +51,7 @@ const Login = () => {
            onChange={handleTextInput}
           name="password"
           value={input.password}
+          className="Inputs"
           />
         </fieldset>
         <button type="submit">Login</button>
