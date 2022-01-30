@@ -34,7 +34,7 @@ const Login = () => {
     <div className="fullForm">
       <Layout>
       <form onSubmit={handleSubmit} className="loginForm">
-        <fieldset>
+        <fieldset id="border">
           <legend id="legend"> Login</legend>
           <label>Email</label>
           <input 
@@ -54,7 +54,7 @@ const Login = () => {
           className="Inputs"
           />
         </fieldset>
-        <button type="submit">Login</button>
+        <button type="submit" id="button">Login</button>
       </form>
       </Layout>
     </div>
