@@ -38,20 +38,20 @@ export const createUser = (props) =>
       console.log(error);
     });
 
-    export const getUserPosts = (props) => {
-      console.log(props)
+    export const getUserPosts = (props) => 
+      // console.log(props)
     
     axios({
-      url: `${BaseURL}user/${props}`,
+      url: `${BaseURL}user${props}`,
     })
       .then((response) => {
-        console.log(response.data.data.user.posts)
-        return response.data.data.user.posts;
+        // console.log(response.data)
+        return response.data;
       })
       .catch((error) => {
         console.log(error);
       })
-    };
+    
 // export const apiPut = axios({
 //   method: "put",
 //   url: `${BaseURL}`,
