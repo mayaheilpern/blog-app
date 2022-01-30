@@ -25,6 +25,18 @@ export const createUser = (props) =>
       console.log(error);
     });
 
+    export const loginUser = (props) =>
+  axios({
+    method: "post",
+    url: `${BaseURL}login`,
+    data: props,
+  })
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 // export const apiPut = axios({
 //   method: "put",
 //   url: `${BaseURL}`,
