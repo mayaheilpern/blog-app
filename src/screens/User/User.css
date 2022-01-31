@@ -6,3 +6,17 @@
     margin-top: 30px;
     text-align: center;
 }
+
+.blogButton {
+    background-color: rgb(70, 124, 147);
+    color: antiquewhite;
+    box-shadow: black;
+    border-width: 3px;
+    margin: 5px;
+}
+
+.buttonContainer {
+    background-color: rgb(75, 41, 41);
+    display: flexbox;
+    margin: 5px;
+}

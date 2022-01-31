@@ -2,7 +2,9 @@ import {useParams,useNavigate} from "react-router-dom";
 // import Posts from "../../components/Posts/Posts";
 import Layout from "../../Layout/Layout";
 import {useEffect, useState} from "react";
+
 import {apiDelete, getUserPosts,apiPut} from "../../services/apiConfig";
+
 import "./User.css";
 
 export default function User() {
@@ -24,6 +26,7 @@ export default function User() {
   // console.log(posts)
   const handleEdit = (e) => {
     e.preventDefault();
+
     const id = localStorage.getItem("id");
     const token = localStorage.getItem("token");
     const post = "edited";
@@ -32,6 +35,7 @@ export default function User() {
       console.log(res);
     }
     Edit();
+
     navigate("/user/addblog");
   }
   const handleDelete = (e,post) => {
@@ -57,6 +61,7 @@ export default function User() {
                 <p>{post.content}</p>
                 <button onClick={(e) => { handleEdit(e) }}>Edit</button>
                 <button onClick={(e) => { handleDelete(e,post._id) }}>Delete</button>
+
               </div>
             );
           })}
