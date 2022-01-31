@@ -20,7 +20,7 @@ function App() {
         <Route path="/user/:id/info" element={<User />} />
         <Route path="/displayall" element={<DisplayBlog />}/>
         <Route path="/addblog" element={<AddBlog />} />          
-
+        <Route path="/user/addblog" element={<AddBlog />} /> 
       </Routes>
     </div>
   );

@@ -68,24 +68,27 @@ export const createPost = (id, blog, token) =>
       console.log(error);
     });
 
-// export const apiPut = axios({
-//   method: "put",
-//   url: `${BaseURL}`,
-// })
-//   .then((response) => {
-//     return response.data;
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+export const apiPut = axios({
+  method: "put",
+  url: `${BaseURL}`,
+})
+  .then((response) => {
+    return response.data;
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
-// export const apiDelete = axios({
-//   method: "delete",
-//   url: `${BaseURL}`,
-// })
-//   .then((response) => {
-//     return response.data;
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+export const apiDelete = (id,token,postid) => 
+  axios({
+    method: "delete",
+    url: `${BaseURL}delete/${id}/${postid}`,
+    headers: { Authorization: `${token}` }
+  })
+  .then((response) => {
+    return response.data;
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+

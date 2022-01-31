@@ -25,8 +25,8 @@ const SignUpUser = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let res = await createUser(input);
-    navigate("/allblogs");
+     await createUser(input);
+    navigate("/displayall");
   };
 
   return (
