@@ -2,14 +2,16 @@ import {getPosts} from "../../services/apiConfig";
 import {useState, useEffect} from "react";
 import "./posts.css";
 import { useParams } from "react-router-dom";
+import Layout from "../../Layout/Layout";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const {id} = useParams
-  console.log(id)
+  // console.log();
   useEffect(() => {
+    const token=localStorage.getItem("token");
     const fetchPosts = async () => {
-      const allPosts = await getPosts;
+      const allPosts = await getPosts(token);
       setPosts(allPosts.data);
     };
     fetchPosts();
@@ -32,7 +34,7 @@ const Posts = () => {
         
         }
       })}
-    </div>
+      </div>
   );
 };
 

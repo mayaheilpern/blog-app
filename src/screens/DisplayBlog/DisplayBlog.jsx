@@ -1,10 +1,9 @@
-import {useState, useEffect} from "react";
+// import {useState} from "react";
 import Layout from "../../Layout/Layout";
 import Posts from "../../components/Posts/Posts";
 
-const Displayblog = () => {
-  const [data, setData] = useState({});
-
+export const DisplayBlog = () => {
+  // const [data, setData] = useState({});
   return (
     <Layout>
       <div>
@@ -14,4 +13,5 @@ const Displayblog = () => {
   );
 };
 
-export default Displayblog;
+
+export default DisplayBlog;

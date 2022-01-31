@@ -2,8 +2,10 @@ import axios from "axios";
 
 const BaseURL = "https://radiant-sierra-20133.herokuapp.com/api/";
 
-export const getPosts = axios({
-  url: `${BaseURL}users`,
+export const getPosts = (token) =>
+  axios({
+    url: `${BaseURL}users`,
+    headers: {'Authorization': `${token}`},
 })
   .then((response) => {
     return response.data;
@@ -43,6 +45,7 @@ export const createUser = (props) =>
     
     axios({
       url: `${BaseURL}user${props}`,
+     
     })
       .then((response) => {
         // console.log(response.data)

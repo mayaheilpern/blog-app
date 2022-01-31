@@ -25,7 +25,8 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     let res = await loginUser(input)
-    console.log(res)
+    console.log(res.data.token);
+    localStorage.setItem("token", res.data.token);
     navigate(`/user/${res.data.user._id}/info`)
 
   }
