@@ -1,15 +1,15 @@
 import { useParams } from "react-router-dom";
 // import Posts from "../../components/Posts/Posts";
-import UserLayout from "../../Layout/Layout";
+import Layout from "../../Layout/Layout";
 import { useEffect, useState } from "react";
 import { getUserPosts } from "../../services/apiConfig";
 import './User.css'
 
 
 export default function User() {
-
-    const [posts, setPosts] = useState([])
-    const { id } = useParams()
+  const [posts, setPosts] = useState([]);
+  const { id } = useParams();
+  console.log(localStorage.getItem("id"));
     useEffect(() => {
         const fetchPosts = async () => {
             // console.log(id)
@@ -23,8 +23,10 @@ export default function User() {
 
     return( 
     <div> 
+
         <UserLayout id={id}>
             <div className="card-container2">
+
                 {posts?.posts?.posts.map((post) => {
                         return (
                             <div key={post._id} className="post-cards">
@@ -35,7 +37,7 @@ export default function User() {
                     })
                 }
             </div>
-        </UserLayout>
+        </Layout>
     </div> 
     );
 }
