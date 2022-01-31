@@ -1,0 +1,17 @@
+.form {
+  background-color: white;
+  text-align: center;
+  border: 5px solid rgb(184, 178, 178);
+  box-shadow: 5px 5px 5px black;
+}
+.form-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formH1 {
+  color: white;
+}

@@ -5,14 +5,14 @@ const BaseURL = "https://radiant-sierra-20133.herokuapp.com/api/";
 export const getPosts = (token) =>
   axios({
     url: `${BaseURL}users`,
-    headers: {'Authorization': `${token}`},
-})
-  .then((response) => {
-    return response.data;
+    headers: {Authorization: `${token}`},
   })
-  .catch((error) => {
-    console.log(error);
-  });
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
 export const createUser = (props) =>
   axios({
@@ -27,7 +27,7 @@ export const createUser = (props) =>
       console.log(error);
     });
 
-    export const loginUser = (props) =>
+export const loginUser = (props) =>
   axios({
     method: "post",
     url: `${BaseURL}login`,
@@ -40,21 +40,34 @@ export const createUser = (props) =>
       console.log(error);
     });
 
-    export const getUserPosts = (props) => 
-      // console.log(props)
-    
-    axios({
-      url: `${BaseURL}user${props}`,
-     
+export const getUserPosts = (props) =>
+  // console.log(props)
+
+  axios({
+    url: `${BaseURL}user${props}`,
+  })
+    .then((response) => {
+      // console.log(response.data)
+      return response.data;
     })
-      .then((response) => {
-        // console.log(response.data)
-        return response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-    
+    .catch((error) => {
+      console.log(error);
+    });
+
+export const createPost = (props) =>
+  axios({
+    method: "post",
+    url: `${BaseURL}${props}`,
+    // headers: {Authorization: `${token}`},
+    data: props,
+  })
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
 // export const apiPut = axios({
 //   method: "put",
 //   url: `${BaseURL}`,
