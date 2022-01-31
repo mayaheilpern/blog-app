@@ -1,10 +1,12 @@
 import {NavLink,useNavigate} from "react-router-dom";
 import "./navbar.css";
-const Navbar = () => {
-  let navigate=useNavigate();
+const Navbar = (props) => {
+  
+  let navigate = useNavigate();
   const handleLogout = (e) => {
     e.preventDefault();
     localStorage.removeItem("token");
+    localStorage.removeItem("id");
     navigate("/");
   }
   return (
@@ -15,7 +17,7 @@ const Navbar = () => {
       <NavLink to="/login">Login</NavLink>
       <NavLink to="/" onClick={(e) => { handleLogout(e) }}>Logout</NavLink>
       <NavLink to="/addblog">Add Blog</NavLink>
-      <NavLink to="/user/info">User Information</NavLink>
+      <NavLink to={`/user/${localStorage.getItem("id")}/info`}>User Information</NavLink>
     </div>
   );
 };
