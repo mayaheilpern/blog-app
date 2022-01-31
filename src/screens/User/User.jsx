@@ -2,7 +2,10 @@ import {useParams,useNavigate} from "react-router-dom";
 // import Posts from "../../components/Posts/Posts";
 import Layout from "../../Layout/Layout";
 import {useEffect, useState} from "react";
+
+
 import {apiDelete, getUserPosts} from "../../services/apiConfig";
+
 import "./User.css";
 
 export default function User() {
@@ -26,8 +29,10 @@ export default function User() {
   }, [id]);
   const handleEdit = (e,pid) => {
     e.preventDefault();
+
     localStorage.setItem("pid", pid);
     navigate("/user/editblog");
+
   }
   
   const handleDelete = (e,post) => {

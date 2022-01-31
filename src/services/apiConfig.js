@@ -68,7 +68,9 @@ export const createPost = (id, blog, token) =>
       console.log(error);
     });
 
+
 export const apiPut = (userid,postid,token,post) =>  axios({
+
   method: "put",
   url: `${BaseURL}user/update/${userid}/${postid}`,
   headers: { Authorization: `${token}` },
