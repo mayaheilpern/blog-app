@@ -3,7 +3,6 @@ import DisplayBlog from "./screens/DisplayBlog/DisplayBlog";
 import Home from "./screens/Home/Home";
 import Login from "./screens/Login/Login";
 import Logout from "./screens/Logout/Logout";
-// import Home from "./screens/Home/Home";
 import SignUpUser from "./screens/SignUpUser/SignUp";
 import User from "./screens/User/User";
 import AddBlog from "./screens/AddBlog/AddBlog";
