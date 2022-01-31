@@ -1,0 +1,8 @@
+.card-container2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+}
