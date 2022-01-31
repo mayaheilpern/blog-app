@@ -7,7 +7,7 @@ const Navbar = (props) => {
     e.preventDefault();
     localStorage.removeItem("token");
     localStorage.removeItem("id");
-    navigate("/");
+    navigate("/logout");
   }
   return (
     <div className="navbar">
@@ -15,7 +15,7 @@ const Navbar = (props) => {
       <NavLink to="/displayall">All Blogs</NavLink>
       <NavLink to="/signup">Signup</NavLink>
       <NavLink to="/login">Login</NavLink>
-      <NavLink to="/" onClick={(e) => { handleLogout(e) }}>Logout</NavLink>
+      <NavLink to="/logout" onClick={(e) => { handleLogout(e) }}>Logout</NavLink>
       <NavLink to="/addblog">Add Blog</NavLink>
       <NavLink to={`/user/${localStorage.getItem("id")}/info`}>User Information</NavLink>
     </div>
