@@ -2,6 +2,7 @@ import {createUser} from "../../services/apiConfig";
 import {useState} from "react";
 import "./signUpUser.css";
 import {useNavigate} from "react-router-dom";
+import Layout from "../../Layout/Layout";
 const default_User = {
   userName: "",
   firstName: "",
@@ -29,57 +30,60 @@ const SignUpUser = () => {
   };
 
   return (
-    <div>
-      
-      <form
+
+    <Layout>
+       <div className="leftside"></div>
+      <div className="rightside"></div>
+      <form className="signUpForm"
+
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
-        <div className="leftside"></div>
-      <div className="rightside"></div>
-        <label>user Name</label>
-        <input
+        <label className="signUpLabel">user Name</label>
+        <input className="signUpInput"
           name="userName"
           value={input.userName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label>first Name</label>
-        <input
+        <label className="signUpLabel">first Name</label>
+        <input className="signUpInput"
           name="firstName"
           value={input.firstName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label>last Name</label>
-        <input
+        <label className="signUpLabel">last Name</label>
+        <input className="signUpInput"
           name="lastName"
           value={input.lastName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label>Email</label>
-        <input
+        <label className="signUpLabel">Email</label>
+        <input className="signUpInput"
           name="email"
           value={input.email}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label>password</label>
-        <input
+        <label className="signUpLabel">password</label>
+        <input className="signUpInput"
+          type="password"
           name="password"
           value={input.password}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label>confirmPassword</label>
-        <input
+        <label className="signUpLabel">confirmPassword</label>
+        <input className="signUpInput"
+          type="password"
           name="confirmPassword"
           value={input.confirmPassword}
           onChange={(e) => {
@@ -88,7 +92,8 @@ const SignUpUser = () => {
         ></input>
         <button>Submit</button>
       </form>
-    </div>
+      </Layout>
+
   );
 };
 

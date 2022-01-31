@@ -9,9 +9,11 @@ const Navbar = () => {
       <NavLink to="/login">Login</NavLink>
       <NavLink to="/logout">Logout</NavLink>
       <NavLink to="/addblog">Add Blog</NavLink>
-      <NavLink to="/userinfo">User Information</NavLink>
+      <NavLink to="/user/:id/info">User Information</NavLink>
     </div>
   );
 };
+
+
 
 export default Navbar;
