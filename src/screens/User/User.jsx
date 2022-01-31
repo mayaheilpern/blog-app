@@ -2,7 +2,7 @@ import {useParams,useNavigate} from "react-router-dom";
 // import Posts from "../../components/Posts/Posts";
 import Layout from "../../Layout/Layout";
 import {useEffect, useState} from "react";
-import {apiDelete, getUserPosts} from "../../services/apiConfig";
+import {apiDelete, getUserPosts,apiPut} from "../../services/apiConfig";
 import "./User.css";
 
 export default function User() {
@@ -24,6 +24,14 @@ export default function User() {
   // console.log(posts)
   const handleEdit = (e) => {
     e.preventDefault();
+    const id = localStorage.getItem("id");
+    const token = localStorage.getItem("token");
+    const post = "edited";
+    const Edit =async () => {
+      let res = await apiPut(id,token,post);
+      console.log(res);
+    }
+    Edit();
     navigate("/user/addblog");
   }
   const handleDelete = (e,post) => {
