@@ -1,10 +1,4 @@
-
-
-
 import {Routes, Route} from "react-router-dom";
-
-
-import Layout from "./Layout/Layout";
 import DisplayBlog from "./screens/DisplayBlog/DisplayBlog";
 import Home from "./screens/Home/Home";
 import Login from "./screens/Login/Login";
