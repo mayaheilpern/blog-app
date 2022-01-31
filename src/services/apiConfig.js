@@ -54,12 +54,12 @@ export const getUserPosts = (props) =>
       console.log(error);
     });
 
-export const createPost = (props) =>
+export const createPost = (id, blog, token) =>
   axios({
     method: "post",
-    url: `${BaseURL}${props}`,
-    // headers: {Authorization: `${token}`},
-    data: props,
+    url: `${BaseURL}post/${id}`,
+    headers: {Authorization: `${token}`},
+    data: blog,
   })
     .then((response) => {
       return response.data;
