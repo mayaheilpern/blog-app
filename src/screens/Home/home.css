@@ -1,0 +1,15 @@
+#welcome {
+    text-align: center;
+}
+
+#helloThere {
+    display: flexbox;
+    justify-items: center;
+    text-align: center;
+}
+
+.homeDiv {
+    display: inline-flexbox;
+    text-align: center;
+    justify-content: center;
+}
