@@ -12,7 +12,8 @@ const defaultUser = {
 
 const Login = () => {
     const navigate = useNavigate();
-    const [input, setInput] = useState(defaultUser);
+  const [input, setInput] = useState(defaultUser);
+  const [id,setId]=useState();
   
     const handleTextInput = (e) => {
       const {name, value} = e.target;
@@ -27,13 +28,15 @@ const Login = () => {
     let res = await loginUser(input)
     console.log(res.data.token);
     localStorage.setItem("token", res.data.token);
+    setId(res.data.user._id);
+    localStorage.setItem("id", res.data.user._id);
     navigate(`/user/${res.data.user._id}/info`)
 
   }
 
   return(
     <div className="fullForm">
-      <Layout>
+      <Layout id={id}>
       <form onSubmit={handleSubmit} className="loginForm">
         <fieldset id="border">
           <legend id="legend"> Login</legend>
