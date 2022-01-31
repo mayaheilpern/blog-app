@@ -1,3 +1,10 @@
+
+  background-color: yellow;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+} */
+
 .leftside {
   position: absolute;
   width: 50px;
