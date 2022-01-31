@@ -9,6 +9,7 @@ export default function User() {
   const [posts, setPosts] = useState([]);
   const {id} = useParams();
   console.log(localStorage.getItem("id"));
+
   useEffect(() => {
     const fetchPosts = async () => {
       // console.log(id)
