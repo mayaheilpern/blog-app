@@ -9,20 +9,19 @@ import User from "./screens/User/User";
 import AddBlog from "./screens/AddBlog/AddBlog";
 
 function App() {
-
   return (
     <div className="App">
       <Routes>
-
         <Route path="/" element={<Home />} />
-        <Route path='/logout' element={<Logout />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUpUser  />} />
+        <Route path="/signup" element={<SignUpUser />} />
         <Route path="/user/:id/info" element={<User />} />
         <Route path="/displayall" element={<DisplayBlog />}/>
         <Route path="/addblog" element={<AddBlog />} />          
         <Route path="/user/addblog" element={<AddBlog />} /> 
         <Route path="/user/editblog" element={<EditBlog/>}/>
+
       </Routes>
     </div>
   );
