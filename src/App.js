@@ -10,22 +10,15 @@ import User from "./screens/User/User";
 
 
 function App() {
-  const [user,setUser]=useState(null);
-  useEffect(() => {
-    const fetchUser = async () => {
-      const user = await 
-      user? setUser(user): setUser(null)
-    }
-    fetchUser();
-  }, []);
+ 
   
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout><h1>A new Blogger has Appeared</h1></Layout>} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUpUser setUser={setUser}/>} />
-        <Route path="/user/:id/info" element={<User user={user}/>} />
+        <Route path="/signup" element={<SignUpUser />} />
+        <Route path="/user/:id/info" element={<User />} />
         <Route path="/displayall" element={<DisplayBlog/>}/>
       </Routes>
     </div>
