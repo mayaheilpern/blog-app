@@ -47,7 +47,8 @@ const AddBlog = () => {
               handleTextInput(e);
             }}
           ></textarea>
-          <button type="submit">Submit</button>
+          <br />
+          <button type="submit" id="blogButton">Submit</button>
         </form>
       </div>
     </Layout>
