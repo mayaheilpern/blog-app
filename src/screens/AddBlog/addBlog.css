@@ -3,15 +3,27 @@
   text-align: center;
   border: 5px solid rgb(184, 178, 178);
   box-shadow: 5px 5px 5px black;
+  width: 50%;
 }
 .form-container {
   margin-top: 20px;
-  display: flex;
+  display: block;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .formH1 {
   color: white;
 }
+
+#blogButton {
+  /* display: block; */
+  justify-content: center;
+  text-align: center;
+  color: antiquewhite;
+  margin-top: 40px;
+  padding: 10px 40px 10px 40px;
+  background-color: rgb(75, 41, 41);
+} 
