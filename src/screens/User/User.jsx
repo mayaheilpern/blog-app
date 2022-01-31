@@ -22,7 +22,6 @@ export default function User() {
   }, [id]);
   // console.log(posts)
 
-
   return (
     <div>
       <Layout id={id}>
