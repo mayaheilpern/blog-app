@@ -25,7 +25,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let res = await loginUser(input)
+    let res = await loginUser(input);
     console.log(res.data.token);
     localStorage.setItem("token", res.data.token);
     setId(res.data.user._id);
