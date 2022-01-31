@@ -47,8 +47,10 @@ export default function User() {
               <div key={post._id} className="post-cards">
                 <h3>{`${posts.posts.userName}`}</h3>
                 <p>{post.content}</p>
-                <button onClick={(e) => { handleEdit(e) }}>Edit</button>
-                <button onClick={(e) => { handleDelete(e,post._id) }}>Delete</button>
+                <div className="buttonContainer">
+                <button onClick={(e) => { handleEdit(e) }} className="blogButton">Edit</button>
+                <button onClick={(e) => { handleDelete(e,post._id) }} className="blogButton">Delete</button>
+                </div>
               </div>
             );
           })}
