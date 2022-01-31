@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {createPost} from "../../services/apiConfig";
-import {useParams} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import "./addBlog.css";
 import Layout from "../../Layout/Layout";
 
@@ -10,7 +10,9 @@ const defaultBlog = {
 
 const AddBlog = () => {
   const [blog, setBlog] = useState(defaultBlog);
-  const {id} = useParams();
+  const id = localStorage.getItem("id");
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
 
   const handleTextInput = (e) => {
     const {name, value} = e.target;
@@ -22,15 +24,30 @@ const AddBlog = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let res = await createPost(id);
+    await createPost(id, blog, token);
+    navigate("/displayall");
   };
 
   return (
     <Layout>
       <div className="form-container">
         <h1 className="formH1">Create a new blog post</h1>
-        <form>
-          <textarea className="form" rows="20" cols="75"></textarea>
+        <form
+          onSubmit={(e) => {
+            handleSubmit(e);
+          }}
+        >
+          <textarea
+            className="form"
+            name="content"
+            value={blog.content}
+            rows="20"
+            cols="75"
+            onChange={(e) => {
+              handleTextInput(e);
+            }}
+          ></textarea>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </Layout>
