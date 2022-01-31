@@ -1,6 +1,6 @@
 import {createUser} from "../../services/apiConfig";
 import {useState} from "react";
-import "./signUpUser.css";
+import "../Login/login.css";
 import {useNavigate} from "react-router-dom";
 import Layout from "../../Layout/Layout";
 const default_User = {
@@ -31,49 +31,56 @@ const SignUpUser = () => {
 
   return (
 
+      <div className="fullForm">
     <Layout>
-       <div className="leftside"></div>
-      <div className="rightside"></div>
-      <form className="signUpForm"
+       {/* <div className="fullForm"></div> */}
+      <form className="loginForm"
 
         onSubmit={(e) => {
           handleSubmit(e);
         }}
       >
-        <label className="signUpLabel">user Name</label>
-        <input className="signUpInput"
+        <fieldset id="border">
+        <legend id="legend">Signup</legend>
+        <br />
+        <label>Username</label>
+        <input className="Inputs"
           name="userName"
           value={input.userName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label className="signUpLabel">first Name</label>
-        <input className="signUpInput"
+        <br/>
+        <label >First Name</label>
+        <input className="Inputs"
           name="firstName"
           value={input.firstName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label className="signUpLabel">last Name</label>
-        <input className="signUpInput"
+        <br />
+        <label >Last Name</label>
+        <input className="Inputs"
           name="lastName"
           value={input.lastName}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label className="signUpLabel">Email</label>
-        <input className="signUpInput"
+        <br />
+        <label>Email</label>
+        <input className="Inputs"
           name="email"
           value={input.email}
           onChange={(e) => {
             handleTextInput(e);
           }}
         ></input>
-        <label className="signUpLabel">password</label>
-        <input className="signUpInput"
+        <br />
+        <label >Password</label>
+        <input className="Inputs"
           type="password"
           name="password"
           value={input.password}
@@ -81,8 +88,9 @@ const SignUpUser = () => {
             handleTextInput(e);
           }}
         ></input>
-        <label className="signUpLabel">confirmPassword</label>
-        <input className="signUpInput"
+        <br />
+        <label >Confirm Password</label>
+        <input className="Inputs"
           type="password"
           name="confirmPassword"
           value={input.confirmPassword}
@@ -90,9 +98,12 @@ const SignUpUser = () => {
             handleTextInput(e);
           }}
         ></input>
-        <button>Submit</button>
+        <br />
+        </fieldset>
+        <button id="button">Submit</button>
       </form>
       </Layout>
+      </div>
 
   );
 };
