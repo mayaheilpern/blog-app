@@ -37,13 +37,13 @@ const Login = () => {
   return(
     <div className="fullForm">
       <Layout id={id}>
-      <form onSubmit={handleSubmit} className="loginForm">
+      <form onSubmit={(e) => {handleSubmit(e)}} className="loginForm">
         <fieldset id="border">
           <legend id="legend"> Login</legend>
           <label>Email</label>
           <input 
           type="text" 
-          onChange={handleTextInput} 
+          onChange={(e) => {handleTextInput(e)}} 
           name="email"
           value={input.email}
           className="Inputs"
@@ -52,7 +52,7 @@ const Login = () => {
           <label>Password</label>
           <input 
           type="password"
-           onChange={handleTextInput}
+           onChange={(e) => {handleTextInput(e)}}
           name="password"
           value={input.password}
           className="Inputs"
