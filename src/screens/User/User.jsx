@@ -24,7 +24,7 @@ export default function User() {
     return( 
     <div> 
         <UserLayout id={id}>
-            <div className="card-container">
+            <div className="card-container2">
                 {posts?.posts?.posts.map((post) => {
                         return (
                             <div key={post._id} className="post-cards">
