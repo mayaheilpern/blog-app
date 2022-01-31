@@ -3,16 +3,20 @@ import {useParams,useNavigate} from "react-router-dom";
 import Layout from "../../Layout/Layout";
 import {useEffect, useState} from "react";
 
-import {apiDelete, getUserPosts,apiPut} from "../../services/apiConfig";
+
+import {apiDelete, getUserPosts} from "../../services/apiConfig";
 
 import "./User.css";
 
 export default function User() {
   const [posts, setPosts] = useState([]);
+  
+  // const [edit, setEdit] = useState(default_Edit);
   const { id } = useParams();
   const navigate=useNavigate();
   console.log(localStorage.getItem("id"));
 
+  
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -23,21 +27,14 @@ export default function User() {
     };
     fetchPosts();
   }, [id]);
-  // console.log(posts)
-  const handleEdit = (e) => {
+  const handleEdit = (e,pid) => {
     e.preventDefault();
 
-    const id = localStorage.getItem("id");
-    const token = localStorage.getItem("token");
-    const post = "edited";
-    const Edit =async () => {
-      let res = await apiPut(id,token,post);
-      console.log(res);
-    }
-    Edit();
+    localStorage.setItem("pid", pid);
+    navigate("/user/editblog");
 
-    navigate("/user/addblog");
   }
+  
   const handleDelete = (e,post) => {
     e.preventDefault();
     console.log(post);
@@ -60,7 +57,7 @@ export default function User() {
                 <h3>{`${posts.posts.userName}`}</h3>
                 <p>{post.content}</p>
                 <div className="buttonContainer">
-                <button onClick={(e) => { handleEdit(e) }} className="blogButton">Edit</button>
+                <button onClick={(e) => { handleEdit(e,post._id) }} className="blogButton">Edit</button>
                 <button onClick={(e) => { handleDelete(e,post._id) }} className="blogButton">Delete</button>
                 </div>
               </div>
