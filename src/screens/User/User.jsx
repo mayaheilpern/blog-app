@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 // import Posts from "../../components/Posts/Posts";
-import { UserLayout } from "../../Layout/Layout";
+import UserLayout from "../../Layout/Layout";
 import { useEffect, useState } from "react";
 import { getUserPosts } from "../../services/apiConfig";
 
